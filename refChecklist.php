@@ -39,56 +39,59 @@ h3{
     <script src="js/bootstrap.min.js"></script>
     <div class="heading">FILL THE CLAIM DETAILS AND THE DOCUMENTS SUBMITTED</div>
      <div class="container">
-    <form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
+    <form class="form-horizontal" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" enctype="multipart/form-data">
             <label  class="col-md-4" for="applicantName">Enter Applicant's full name:</label>
-            <div class="col-md-8"> <input type="text" id="applicantName" name="applicantName" placeholder="Applicant Name" /></div>
+            <div class="col-md-8"> <input type="text" id="applicantName" name="applicantName" placeholder="Applicant Name" required /></div>
             <label class="col-md-4" for="idNo">Enter the Identity No:</label>
-            <div class="col-md-8"><input type="text" id="idNo" name="idNo" placeholder="Identity No" /></div>
+            <div class="col-md-8"><input type="text" id="idNo" name="idNo" placeholder="Identity No" required/></div>
             <label class="col-md-4" for="pis">Enter PIS No:</label>
-            <div class="col-md-8"><input type="number" id="pis" name="pis" placeholder="PIS No"/></div>
+            <div class="col-md-8"><input type="number" id="pis" name="pis" placeholder="PIS No" required/></div>
             <label class="col-md-4" for="rank">Enter rank:</label>
-            <div class="col-md-8"><input type="text" id="rank" name="rank" placeholder="Rank"/></div>
+            <div class="col-md-8"><input type="text" id="rank" name="rank" placeholder="Rank" required/></div>
             <label class="col-md-4" for="relation">Enter relation with the CGHS holder:</label>
-            <div class="col-md-8"><input type="text" id="relation" name="relation" placeholder="Relation" /></div>
+            <div class="col-md-8"><input type="text" id="relation" name="relation" placeholder="Relation" required/></div>
             <label class="col-md-4" for="pincode">Enter Pincode:</label>
-            <div class="col-md-8"><input type="number" id="pincode" name="pincode" placeholder="Pincode" /></div>
+            <div class="col-md-8"><input type="number" id="pincode" name="pincode" placeholder="Pincode" required /></div>
             <label class="col-md-4" for="startDate">Enter the starting date of treatment:</label>
-            <div class="col-md-8"><input type="date" id="startDate" name="startDate" /></div>
+            <div class="col-md-8"><input type="date" id="startDate" name="startDate" required/></div>
             <label class="col-md-4" for="endDate">Enter the last date of treatment:</label>
-            <div class="col-md-8"><input type="date" id="endDate" name="endDate" /></div>
+            <div class="col-md-8"><input type="date" id="endDate" name="endDate" required/></div>
             <label class="col-md-4" for="hospitalName">Enter the Hospital Name:</label>
-            <div class="col-md-8"><input type="text" id="hospitalName" name="hospitalName" placeholder="Hospital Name" /></div>
+            <div class="col-md-8"><input type="text" id="hospitalName" name="hospitalName" placeholder="Hospital Name" required/></div>
             <label class="col-md-4" for="hospitalAddress">Enter the Hospital Address:</label>
-            <div class="col-md-8"><textarea id="hospitalAddress" name="hospitalAddress" placeholder="Hospital Address"></textarea></div>
+            <div class="col-md-8"><textarea id="hospitalAddress" name="hospitalAddress" placeholder="Hospital Address" required></textarea></div>
             <label class="col-md-4" for="policestationNo">Enter the Police Station No:</label>
-            <div class="col-md-8"><input type="number" id="policestationNo" name="policestationNo" placeholder="Police Station No" /></div>
+            <div class="col-md-8"><input type="number" id="policestationNo" name="policestationNo" placeholder="Police Station No" required/></div>
             <label class="col-md-4" for="siNo">Enter SI No:</label>
-            <div class="col-md-8"><input type="text" id="siNo" name="siNo" placeholder="SI No" /></div>
+            <div class="col-md-8"><input type="text" id="siNo" name="siNo" placeholder="SI No" required/></div>
             <label class="col-md-4" for="diaryNo">Enter Diary No:</label>
-            <div class="col-md-8"><input type="text" id="diaryNo" name="diaryNo" placeholder="Diary No" /></div>
+            <div class="col-md-8"><input type="text" id="diaryNo" name="diaryNo" placeholder="Diary No" required/></div>
             <label class="col-md-4" for="refHospitalname">Enter Referred Hospital Name:</label>
-            <div class="col-md-8"><input type="text" id="refHospitalname" name="refHospitalname" placeholder="Referred Hospital Name" /></div>
+            <div class="col-md-8"><input type="text" id="refHospitalname" name="refHospitalname" placeholder="Referred Hospital Name" required/></div>
             <label class="col-md-4" for="appCGHSno">Enter the CGHS No of Applicant:</label>
-            <div class="col-md-8"><input type="number" id="appCGHSno" name="appCGHSno" placeholder="Applicant CGHS Number" /></div>
+            <div class="col-md-8"><input type="number" id="appCGHSno" name="appCGHSno" placeholder="Applicant CGHS Number" required/></div>
             <label class="col-md-4" for="appCGHSexp">Enter the expiry date of CGHS card</label>
-            <div class="col-md-8"><input type="date" id="appCGHSexp" name="appCGHSexp" /></div>
+            <div class="col-md-8"><input type="date" id="appCGHSexp" name="appCGHSexp" required/></div>
             <label class="col-md-4" for="refCGHSno">Enter the CGHS No of Dependent:</label>
             <div class="col-md-8"><input type="number" id="refCGHSno" name="refCGHSno" placeholder="Dependent CGHS Number" /></div>
             <label class="col-md-4" for="refCGHSexp">Enter the expiry date of CGHS card</label>
             <div class="col-md-8"><input type="date" id="refCGHSexp" name="refCGHSexp" /></div>
             <label class="col-md-4" for="appCGHScategory">Enter the category of CGHS Applicant:</label>
-            <div class="col-md-8"><input type="text" id="appCGHScategory" name="appCGHScategory" placeholder="CGHS Applicant Category" /></div>
+            <div class="col-md-8"><input type="text" id="appCGHScategory" name="appCGHScategory" placeholder="CGHS Applicant Category" required /></div>
             <label class="col-md-4" for="disease">Enter the disease of the patient:</label>
-            <div class="col-md-8"><input type="text" id="disease" name="disease" placeholder="Disease" /></div>
+            <div class="col-md-8"><input type="text" id="disease" name="disease" placeholder="Disease" required/></div>
             <label class="col-md-4" for="applicationDate">Enter the date of application:</label>
-            <div class="col-md-8"><input type="date" id="applicationDate" name="applicationDate" /></div>
+            <div class="col-md-8"><input type="date" id="applicationDate" name="applicationDate" required/></div>
             <label class="col-md-4" for="amtAsked">Enter the amount requested in claim:</label>
             <div class="col-md-8"><input type="number" id="amtAsked" name="amtAsked" placeholder="Amount Asked" /></div>
             <label class="col-md-4" for="amtGranted">Enter the amount granted in claim:</label>
             <div class="col-md-8"><input type="number" id="amtGranted" name="amtGranted" placeholder="Amount Granted" /></div>
             <label class="col-md-4" for="amtAvailable">Enter the amount avaliable:</label>
             <div class="col-md-8"><input type="number" id="amtAvailable" name="amtAvailable" placeholder="Amount Available" /></div>
-            <h3>Checklist of documents required</h3>
+           
+        
+        
+        <h3>Checklist of documents required</h3>
             <div class="row"><div class="col-md-4">ID Card</div><div class="col-md-4"><input type="text" name="ID Card" placeholder="Page No." /></div><div class="col-md-4"><input type="checkbox"></div> </div>
             <div class="row"><div class="col-md-4">CGHS Card</div><div class="col-md-4"><input type="text" name="CGHS Card" placeholder="Page No." /></div><div class="col-md-4"><input type="checkbox"></div> </div>
             <div class="row"><div class="col-md-4">Dependent Certificate</div><div class="col-md-4"><input type="text" name="Dependent Certificate" placeholder="Page No." /></div><div class="col-md-4"><input type="checkbox"></div> </div>
