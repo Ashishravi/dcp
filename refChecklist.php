@@ -39,7 +39,7 @@ h3{
     <script src="js/bootstrap.min.js"></script>
     <div class="heading">FILL THE CLAIM DETAILS AND THE DOCUMENTS SUBMITTED</div>
      <div class="container">
-    <form class="form-horizontal" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" enctype="multipart/form-data">
+    <form class="form-horizontal" action="add_new_referral.php" method="post" enctype="multipart/form-data">
             <label  class="col-md-4" for="applicantName">Enter Applicant's full name:</label>
             <div class="col-md-8"> <input type="text" id="applicantName" name="applicantName" placeholder="Applicant Name" required /></div>
             <label class="col-md-4" for="idNo">Enter the Identity No:</label>
