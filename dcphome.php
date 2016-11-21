@@ -56,6 +56,9 @@ if($_SESSION["sess_userrole"]!="admin"){
           <div class="col-md-3"></div>
         </div>
     </div>    
+      
+   <?php require'fetch.php';
+      fetch_for_dcp();?>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
