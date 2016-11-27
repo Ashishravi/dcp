@@ -32,6 +32,7 @@
                 <tr><th>For Dealing Hand</th><td>dealinghand</td><td>123456789</td></tr>
                  <tr><th>For ACP</th><td>acp</td><td>123456789</td></tr>
                  <tr><th>For Ins. admin</th><td>iadmin</td><td>123456789</td></tr>
+                <tr><th>For HAG</th><td>hag</td><td>123456789</td></tr>
             </tbody>
           </table>
          </div>

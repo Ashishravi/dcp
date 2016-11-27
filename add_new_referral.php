@@ -30,9 +30,9 @@ try {
     
 $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-$sql = "INSERT INTO form (applicant_name, pis, rank, relation, pincode, startdate, enddate, hospital_name, hospital_address, police_station_no, si_no, diary_no, ref_hospital_name, a_cghs_no, a_cghs_exp, r_cghs_no, r_cghs_exp, a_cghs_category, disease, application_date, amt_asked, amt_granted, amt_available) 
+$sql = "INSERT INTO form (applicant_name, pis, rank, relation, pincode, startdate, enddate, hospital_name, hospital_address, police_station_no, si_no, diary_no, ref_hospital_name, a_cghs_no, a_cghs_exp, r_cghs_no, r_cghs_exp, a_cghs_category, disease, application_date, amt_asked, amt_granted, amt_available, status) 
 
-VALUES ('$appName', $pis, '$rank', '$relation', $pincode, $startDate, $endDate, '$hospitalName', '$hospitalAddress', $policestationNo, $siNo, $diaryNo, '$refHospitalname', $appCGHSno, $appCGHSexp,$refCGHSno, $refCGHSexp, '$appCGHScategory', '$disease', $applicationDate, $amtAsked, $amtGranted, $amtAvailable)";
+VALUES ('$appName', $pis, '$rank', '$relation', $pincode, $startDate, $endDate, '$hospitalName', '$hospitalAddress', $policestationNo, $siNo, $diaryNo, '$refHospitalname', $appCGHSno, $appCGHSexp,$refCGHSno, $refCGHSexp, '$appCGHScategory', '$disease', $applicationDate, $amtAsked, $amtGranted, $amtAvailable, 'HAG')";
 
  // use exec() because no results are returned
     $dbh->exec($sql);

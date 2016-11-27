@@ -12,8 +12,5 @@
 
       echo "unable to connect to database";
    }
-
-
-
    
 ?>

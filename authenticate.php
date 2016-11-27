@@ -47,6 +47,9 @@
         }
         elseif( $_SESSION['sess_userrole'] == "iadmin"){
             header('Location: i_adminhome.php');
+        }
+        elseif( $_SESSION['sess_userrole'] == "hag"){
+            header('Location: haghome.php');
         }else{
             
         }
