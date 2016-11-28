@@ -2,6 +2,7 @@
 
 session_start();
 require 'crud.php';
+include("mpdf/mpdf.php");
 
 
         if (isset($_POST['approve_btn'])) {
@@ -11,20 +12,21 @@ require 'crud.php';
             $comment = $_POST['inputComment'];
             
             switch ($_SESSION["sess_userrole"]){
-                case "hag":
-                    update($_SESSION["sess_userrole"], $id, $comment);
+                case "hag": 
+                    update_data($_SESSION["sess_userrole"], $id, $comment);
                     break;
                 case "acp":
-                    echo "acp approval";
+                   generate('docs/acp/form3.html');
+                    update_data($_SESSION["sess_userrole"], $id, $comment);
                     break;
                 case "admin":
-                     update($_SESSION["sess_userrole"], $id, $comment);
+                    update_data($_SESSION["sess_userrole"], $id, $comment);
                     break;
                 case "dealing":
-                    echo "dealing approval";
+                    update_data($_SESSION["sess_userrole"], $id, $comment);
                     break;
                 case "iadmin":
-                    echo "iadmin approval";
+                    update_data($_SESSION["sess_userrole"], $id, $comment);
                     break;
                 default:
                      header ("Location: index.php");
@@ -36,27 +38,25 @@ require 'crud.php';
             $id = $_POST['sid'];
             $comment = $_POST['inputComment'];
             
-            switch ($_SESSION["sess_userrole"]){
-                case "hag":
-                    delete($_SESSION["sess_userrole"], $id, $comment);
-                    break;
-                case "acp":
-                    echo "acp approval";
-                    break;
-                case "admin":
-                    echo "dcp approval";
-                    break;
-                case "dealing":
-                    echo "dealing approval";
-                    break;
-                case "iadmin":
-                    echo "iadmin approval";
-                    break;
-                default:
-                     header ("Location: index.php");
+            if ($_SESSION["sess_userrole"]!=null){
+                  delete($_SESSION["sess_userrole"], $id, $comment);
             }
+                
         } else {
             //no button pressed
         }
+
+
+function generate($filename){
+     $mpdf=new mPDF('c','A4','','' , 0 , 0 , 0 , 0 , 0 , 0); 
+ 
+                    $mpdf->SetDisplayMode('fullpage');
+
+                    $mpdf->list_indent_first_level = 0;  // 1 or 0 - whether to indent the first level of a list
+
+                    $mpdf->WriteHTML(file_get_contents($filename));
+
+                    $mpdf->Output();
+}
     
 ?>

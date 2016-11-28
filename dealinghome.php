@@ -87,7 +87,7 @@ if($_SESSION["sess_userrole"]!="dealing"){
 
 
 <!-- Content -->
-<div class="container">
+<div class="container-fluid">
   	<div class="row">
       <div class="col-sm-2">
           <ul id="sidebar" class="nav nav-stacked affix">
@@ -100,6 +100,9 @@ if($_SESSION["sess_userrole"]!="dealing"){
       <div class="col-sm-7">
          
 <!-- Content -->
+    <?php require'fetch.php';
+      fetch_for_dcp();?>
+          
       </div>
     </div>
 </div>

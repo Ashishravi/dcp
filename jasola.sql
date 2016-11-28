@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 27, 2016 at 01:12 PM
--- Server version: 10.1.16-MariaDB
--- PHP Version: 7.0.9
+-- Generation Time: Nov 28, 2016 at 12:50 PM
+-- Server version: 10.1.19-MariaDB
+-- PHP Version: 5.6.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -80,7 +80,7 @@ CREATE TABLE `form` (
   `amt_asked` float(8,2) DEFAULT NULL,
   `amt_granted` float(8,2) DEFAULT NULL,
   `amt_available` float(8,2) DEFAULT NULL,
-  `status` enum('NULL','D_HAND','HAG','I_ADMIN','ACP_HEAD','PHQ','DCP','FAILED','APPROVED') NOT NULL
+  `status` enum('NULL','D_HAND','HAG','I_ADMIN','ACP','PHQ','DCP','FAILED','APPROVED') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -88,10 +88,11 @@ CREATE TABLE `form` (
 --
 
 INSERT INTO `form` (`app_id`, `id_no`, `applicant_name`, `pis`, `rank`, `relation`, `pincode`, `startdate`, `enddate`, `hospital_name`, `hospital_address`, `police_station_no`, `si_no`, `diary_no`, `ref_hospital_name`, `a_cghs_no`, `a_cghs_exp`, `r_cghs_no`, `r_cghs_exp`, `a_cghs_category`, `disease`, `application_date`, `amt_asked`, `amt_granted`, `amt_available`, `status`) VALUES
-(1, NULL, 'vikas', 123123, '123', '123', 123, '0000-00-00', '0000-00-00', 'arra', 'eratra', 123, '123', '123', 'dfsdfa', 321, '0000-00-00', 56321, '0000-00-00', 'category', 'disease', '0000-00-00', 123.00, 123.00, 123.00, 'DCP'),
-(2, NULL, 'vinay', 987, 'general', 'self', 110049, '2016-11-08', '0000-00-00', 'dnt knw', 'ina', 456, '564', '564', 'noname', 987456, '0000-00-00', 46, '0000-00-00', 'general', 'disease', '0000-00-00', 987.00, 978.00, 987.00, 'D_HAND'),
-(3, '25', 'ashish', 546, 'general', 'self', 110049, '2016-11-08', '0000-00-00', 'dnt knw', 'ina', 456, '564', '564', 'noname', 987456, '0000-00-00', 46, '0000-00-00', 'general', 'disease', '0000-00-00', 987.00, 978.00, 987.00, 'APPROVED'),
-(4, NULL, 'Ashutosh', 4321, 'hello', 'self', 110049, '0000-00-00', '0000-00-00', 'safdurjung', 'green park', 123, '1231321', '123321', 'hello world', 56215, '0000-00-00', 54354654, '0000-00-00', 'general', 'disease', '0000-00-00', 4564.00, 65464.00, 1231.00, 'HAG');
+(1, NULL, 'vikas', 123123, '123', '123', 123, '0000-00-00', '0000-00-00', 'arra', 'eratra', 123, '123', '123', 'dfsdfa', 321, '0000-00-00', 56321, '0000-00-00', 'category', 'disease', '0000-00-00', 123.00, 123.00, 123.00, 'APPROVED'),
+(2, NULL, 'vinay', 987, 'general', 'self', 110049, '2016-11-08', '0000-00-00', 'dnt knw', 'ina', 456, '564', '564', 'noname', 987456, '0000-00-00', 46, '0000-00-00', 'general', 'disease', '0000-00-00', 987.00, 978.00, 987.00, 'ACP'),
+(3, '25', 'ashish', 546, 'general', 'self', 110049, '2016-11-08', '0000-00-00', 'dnt knw', 'ina', 456, '564', '564', 'noname', 987456, '0000-00-00', 46, '0000-00-00', 'general', 'disease', '0000-00-00', 987.00, 978.00, 987.00, 'ACP'),
+(4, NULL, 'Ashutosh', 4321, 'hello', 'self', 110049, '0000-00-00', '0000-00-00', 'safdurjung', 'green park', 123, '1231321', '123321', 'hello world', 56215, '0000-00-00', 54354654, '0000-00-00', 'general', 'disease', '0000-00-00', 4564.00, 65464.00, 1231.00, 'ACP'),
+(5, NULL, 'ashwani', 987, 'general', 'self', 110049, '2016-11-08', '0000-00-00', 'dnt knw', 'ina', 456, '564', '564', 'noname', 987456, '0000-00-00', 46, '0000-00-00', 'general', 'disease', '0000-00-00', 987.00, 978.00, 987.00, 'ACP');
 
 -- --------------------------------------------------------
 
@@ -182,7 +183,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `form`
 --
 ALTER TABLE `form`
-  MODIFY `app_id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `app_id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `users`
 --

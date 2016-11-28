@@ -18,6 +18,12 @@ function fetch_for_hag(){
 
 }
 
+function fetch_for_acp(){
+    $query_for="ACP";
+    get_query($query_for);
+
+}
+
 function get_query($for) {
     
     try {   
