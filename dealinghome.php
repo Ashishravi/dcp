@@ -1,4 +1,5 @@
 <?php
+require 'fetch.php';
 session_start();
 if($_SESSION["sess_userrole"]!="dealing"){
     header ("Location: index.php");
@@ -100,9 +101,15 @@ if($_SESSION["sess_userrole"]!="dealing"){
       <div class="col-sm-7">
          
 <!-- Content -->
-    <?php require'fetch.php';
-      fetch_for_dcp();?>
+          <h3>Approved</h3>
+            <?php fetch_approved(); ?>
           
+          <h3>in progress</h3>
+          
+            
+          
+          <h3>Failed</h3>
+   
       </div>
     </div>
 </div>

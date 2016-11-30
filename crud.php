@@ -3,24 +3,16 @@
 /*
 function create() {}*/
 
-function read_data($id, $row){
+function read_data($id){
     
         require 'database-config.php';
         $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         $sql = "SELECT app_id, applicant_name, pis, rank, relation, hospital_name, hospital_address, police_station_no, si_no, diary_no, ref_hospital_name, a_cghs_category, disease, application_date, amt_asked, amt_granted FROM form WHERE app_id='$id'";
-     /*    
-          $stmt = $conn->prepare($sql); 
-    $stmt->execute();
-
-    // set the resulting array to associative
-    return $stmt->setFetchMode(PDO::FETCH_ASSOC); */
-         $stmt = $db->query($sql);
-   return $stmt->fetchAll(PDO::FETCH_ASSOC);
+         $stmt = $dbh->query($sql);
+  return $stmt->fetchAll(PDO::FETCH_ASSOC);
          
         
-    
-    
 }
 
 function update_data($user, $id, $comment){    

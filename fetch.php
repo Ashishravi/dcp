@@ -30,6 +30,12 @@ function fetch_for_iadmin(){
 
 }
 
+function fetch_approved(){
+    $query_for="APPROVED";
+    get_query($query_for);
+
+}
+
 function get_query($for) {
     
     try {   
@@ -42,7 +48,7 @@ function get_query($for) {
 
         
     
-               foreach ($dbh->query($sql) as $row) {
+        foreach ($dbh->query($sql) as $row) {
         $sid= $row['app_id'];
    
             echo "<div class='container'>
