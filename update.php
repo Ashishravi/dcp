@@ -22,6 +22,7 @@ $value = array();
 
         $sql = "SELECT app_id, applicant_name, rank,  hospital_name, disease, application_date, amt_asked, amt_granted FROM form WHERE app_id = $id";
             
+            //nothing here
    
        foreach ($dbh->query($sql) as $row) {
            
