@@ -24,6 +24,12 @@ function fetch_for_acp(){
 
 }
 
+function fetch_for_iadmin(){
+    $query_for="I_ADMIN";
+    get_query($query_for);
+
+}
+
 function get_query($for) {
     
     try {   
@@ -49,6 +55,14 @@ function get_query($for) {
                   </div>
                   <div id='$sid' class='panel-collapse collapse'>
                     <div class='panel-body'><b>Rank</b> : $row[rank]</div>
+                    <div class='panel-body'><b> Relation </b>:  $row[relation]</div>
+                    <div class='panel-body'><b> Hospital Name </b>:  $row[hospital_name]</div>
+                    <div class='panel-body'><b> Police Station No. </b>:  $row[police_station_no]</div>
+                    <div class='panel-body'><b>SI No </b> : $row[si_no]</div>
+                    <div class='panel-body'><b>Diary No </b> : $row[diary_no]</div>
+                    <div class='panel-body'><b> CGHS Category </b>:  $row[a_cghs_category]</div>
+                    <div class='panel-body'><b> Disease </b>:  $row[disease]</div>
+                    <div class='panel-body'><b> Applicate Date </b>:  $row[application_date]</div>
                     <div class='panel-body'><b> Mark </b>:  $row[amt_asked]</div>
                   
                   <form class='form-horizontal panel-body' role='form' method='POST' action='update.php'>
